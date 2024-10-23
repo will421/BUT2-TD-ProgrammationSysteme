@@ -87,6 +87,9 @@ Le programme doit afficher, **à la fin**, les chaînes du tableau.
 Fonctions utiles : Il faut inclure `string.h`
 * `strlen(chaîne)` pour avoir la taille d'une chaîne
 * `strcpy(tableauCible, tableauACopier)` pour copier une chaîne
+* `fgets(chaîne, maxLength, stream)` pour remplacer `scanf` et qui permet de lire des espaces
+    * Dans notre cas, **stream** sera `stdin`
+* `atoi(chaîne)` pour convertir une chaîne en entier
 
 
 ## Rappel
