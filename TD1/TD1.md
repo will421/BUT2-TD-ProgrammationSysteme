@@ -115,6 +115,8 @@ if (tmp == NULL) {
 
 # TD1 bonus - Les fichiers
 
+> Pour ceux qui ont fini le TD1 en avance.
+
 ## Exercice 9 : utilisation des fonctions
 
 Tout d’abord créer un fichier **test1.txt** avec 3 lignes écrites.
@@ -138,3 +140,41 @@ argument, dans un fichier portant le nom du second argument, puis d’effacer le
 fichier.
 
 Précision : le deuxième fichier n’existe pas, il sera créé par le programme
+
+## Exercice 11 : lecture partielle
+
+Faire un programme permettant d’ouvrir un fichier contenant au moins 30 caractères, de lire
+les 10 caractères suivant les 15 premiers.
+
+### Fonction utile
+`lseek(fd, nombre_caracteres_a_decaler, option);`
+Options : SEEK_CUR, SEEK_SET, SEEK_END
+
+## Exercice 12 :  utilisation des fonctions, la suite
+
+Écrire un programme effectuant les instructions suivantes :
+* Création : `s = mkdir(chemin, mode);` // créer un dossier **TEST**
+* Création de lien : `s = link(fichier, lien);` // définir un lien du fichier **test.txt** vers **t_link**
+* Suppression de lien : `s = unlink(chemin);` // supprimer le lien
+* Changement de répertoire : `s = chdir(chemin);` // aller dans le répertoire **TEST**
+* Création : créer un fichier **test_td2.txt** dans le répertoire **TEST**
+* Suppression : `s = rmdir(chemin);` // supprimer le dossier **TEST**
+
+## Exercice 13 : listing d’un dossier
+
+Faire un programme qui liste l’ensemble du contenu d’un dossier passé en paramètre (argv)
+en affichant le nom et le type de chaque objet listé (fichier, lien, répertoire…)
+
+## Exercice 14 : listing récursif de dossier
+
+Variante du programme précédent.
+Lister le contenu d’un répertoire et des répertoires situés à l’intérieur
+
+## Exercice 15 :  création d’une arborescence
+
+Écrire un programme demandant à l’utilisateur de saisir des noms de dossier à créer.
+
+## Exercice 16 : un peu plus
+
+Écrire un programme se présentant sous forme d’un menu, avec pour choix la création de
+fichier ou de dossier, et la possibilité de naviguer dans les dossiers.
