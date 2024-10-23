@@ -111,3 +111,30 @@ if (tmp == NULL) {
     tableau = tmp;
 }
 ```
+
+
+# TD1 bonus - Les fichiers
+
+## Exercice 9 : utilisation des fonctions
+
+Tout d’abord créer un fichier **test1.txt** avec 3 lignes écrites.
+Écrire un programme effectuant les instructions suivantes :
+* Création : `creat(nom, mode);` // créer un fichier test2.txt
+* Ouverture :
+    * int fd1 = `open(char[], O_RDONLY);` // ouvrir en lecture le fichier test1.txt
+    * int fd2 = `open(char[], O_WRONLY);` // ouvrir en écriture le fichier test2.txt
+* Lecture : `int read_size = read(fd, buffer, taille);` // lire 10 caractères de test1.txt
+* Écriture : `int write_size = write(fd, buffer, taille);` // écrire ces 10 caractères dans test2
+* Fermeture : `close(fd);` // fermer les fichiers test1.txt et test2.txt
+* Renommer : `rename(ancienNom, nouveau);` // renommer test2.txt en test3.txt
+* Suppression : `unlink(nom);` // supprimer le fichier test1.txt
+
+## Exercice 10 :  utilisation de paramètres
+
+Proposer un programme qui prend en paramètre (argv) deux noms.
+
+Le but du programme est de copier le contenu du fichier portant le nom du premier
+argument, dans un fichier portant le nom du second argument, puis d’effacer le premier
+fichier.
+
+Précision : le deuxième fichier n’existe pas, il sera créé par le programme
