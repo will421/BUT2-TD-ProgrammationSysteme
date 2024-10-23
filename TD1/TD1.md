@@ -80,9 +80,14 @@ On affichera la nouvelle matrice
 
 ## Exercice 8 : tableau de chaînes de caractères
 
-Proposer un programme C qui saisit un nombre **N** de chaînes. Puis alloue dynamique un tableau de **N** chaînes de caractères et le remplit avec des valeurs saisies dans le terminal.
+Proposer un programme C qui saisit un nombre **N** de chaînes. Puis alloue dynamique un tableau de **N** chaînes de caractères et le remplit avec des valeurs saisies dans le terminal. Les chaînes de caractères doivent aussi être alloué dynamiquement (en utilisant la taille de chaque chaîne entrée)
 
-Le programme doit afficher, à la fin, les chaînes du tableau.
+Le programme doit afficher, **à la fin**, les chaînes du tableau.
+
+Fonctions utiles : Il faut inclure `string.h`
+* `strlen(chaîne)` pour avoir la taille d'une chaîne
+* `strcpy(tableauCible, tableauACopier)` pour copier une chaîne
+
 
 ## Rappel
 
