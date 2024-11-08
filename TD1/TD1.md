@@ -139,6 +139,8 @@ Tout d’abord créer un fichier **test1.txt** avec 3 lignes écrites.
 * Renommer : `rename(ancienNom, nouveau);` // renommer test2.txt en test3.txt
 * Suppression : `unlink(nom);` // supprimer le fichier test1.txt
 
+Vous aurez besoin des imports `unistd.h` et `fcntl.h`
+
 ## Exercice 10 :  utilisation de paramètres
 
 Proposer un programme qui prend en paramètre (argv) deux noms.
