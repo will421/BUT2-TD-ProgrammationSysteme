@@ -9,7 +9,7 @@ Une fois les 3 processus fils exécutés, le père indique que tout va bien.
 ## Exercice 2 : Boucle
 
 Écrire un programme C qui crée 2 processus fils. Chaque processus fils affiche son PID
-toutes les secondes.
+toutes les secondes pendant 10 secondes.
 
 ## Exercice 3 : Execution d'autres programmes
 
