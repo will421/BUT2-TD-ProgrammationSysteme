@@ -26,6 +26,27 @@ Reprendre le code de server.c et client.c similaire ce qui à été fait au TD3
 
 Permettre à plusieurs clients de se connecter à l'aide de threads
 
+L'idée, c'est qu'après chaque connexion reçu, il faut créer un thread pour s'occuper de la reception de messages pour la connexion.
+
+Utiliser `pthread_detach` pour detacher le thread créé du thread principal et ne plus avoir à l'attendre
+
+```c
+void lancerThread(data *data)
+{
+    if (pthread_create(&thread_id, NULL, threadFct, data) != 0)
+    {
+        perror("erreur de creation du thread");
+        exit(EXIT_FAILURE);
+    }
+    // Pour que le systeme nettoie le thread sans appel à pthread_join
+    pthread_detach(thread_id);
+}
+```
+
+A savoir que `pthread_exit` ne fonctionnera plus. Pour arreter le thread, il faudra sortir de la fonction avec `return`.
+
+Autre information, `pthread_t` est juste une variable pour contenir l'"id" vers un thread, lors de l'appel à `pthread_create`. La variable peut être réutilisé si il n'y a plus besoin de l'id. Il n'y a donc pas besoin d'en créer plein.
+
 ### Etape 2 : D'autres types de clients
 
 Pour le moment, notre client ne peut qu'envoyer des messages. C'est dû au fait que sur un terminal, il est compliquer de demander à l'utilisateur de taper des message tout en affichant de nouveaux messages.
